@@ -1,14 +1,33 @@
 buildscript {
+
+    ext.versions = [
+            'minSdk'        : 19,
+            'targetSdk'     : 26,
+            'compileSdk'    : 29,
+            'supportLibrary': '27.0.2',
+            'androidPlugin' : '3.4.1',
+            'androidTools'  : '27.0.3',
+    ]
+
+    ext.deps = [
+
+    ]
+
+
     repositories {
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+        google()
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.1'
+        classpath "com.android.tools.build:gradle:3.0.1"
     }
 }
 
 allprojects {
     repositories {
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+        google()
         jcenter()
     }
 }
